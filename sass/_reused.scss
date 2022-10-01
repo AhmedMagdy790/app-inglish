@@ -1,0 +1,68 @@
+@use "variable" as *;
+@use "colors" as *;
+.container {
+    padding-inline: 15px;
+    margin: 0 auto;
+}
+
+%head {
+    color: $bs-gray;
+    font-family: $google--font-main;
+    line-height: 1.2;
+}
+
+h1,
+h2,
+h3 {
+ @extend %head;
+}
+
+.h1 { font-size: $fs-1; }
+.h2 { font-size: $fs-2; }
+.h3 { font-size: $fs-3; }
+
+.btn {
+    font-size: $fs-6;
+    font-weight: $fw-700;
+    padding: 8px 30px;
+    border-radius: 4px;
+    transition: $transition;
+    &:is(:hover, :focus) {
+        transform: translateY(-2px);
+    }
+}
+
+.btn-primary {
+    background: $bs-green;
+    color: $bs-white;
+    &:is(:hover, :focus) {
+        $bs-green: hsl(152, 69%, 20%);
+    }
+}
+
+.btn-outline {
+    border: 1px solid $bs-indigo;
+    color: $bs-indigo;
+    &:is(:hover, :focus) {
+        background: $bs-indigo;
+        color: $bs-white;
+        box-shadow: 0 3px 10px hsl(263, 90%, 31%);
+    }
+}
+
+.btn-secondary {
+    border: 1px solid hsla(245, 67%, 59%, 0.15);
+    color: $bs-indigo;
+}
+
+.setion-title {
+    text-align: center;
+}
+
+.section-text {
+    color: $bs-gray-dark;
+    font-size: $fs-6;
+    line-height: 1.7;
+    text-align: center;
+}
+
